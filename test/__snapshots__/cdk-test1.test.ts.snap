@@ -1,0 +1,1265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot test 1`] = `
+{
+  "Mappings": {
+    "ServiceprincipalMap": {
+      "af-south-1": {
+        "states": "states.af-south-1.amazonaws.com",
+      },
+      "ap-east-1": {
+        "states": "states.ap-east-1.amazonaws.com",
+      },
+      "ap-northeast-1": {
+        "states": "states.ap-northeast-1.amazonaws.com",
+      },
+      "ap-northeast-2": {
+        "states": "states.ap-northeast-2.amazonaws.com",
+      },
+      "ap-northeast-3": {
+        "states": "states.ap-northeast-3.amazonaws.com",
+      },
+      "ap-south-1": {
+        "states": "states.ap-south-1.amazonaws.com",
+      },
+      "ap-south-2": {
+        "states": "states.ap-south-2.amazonaws.com",
+      },
+      "ap-southeast-1": {
+        "states": "states.ap-southeast-1.amazonaws.com",
+      },
+      "ap-southeast-2": {
+        "states": "states.ap-southeast-2.amazonaws.com",
+      },
+      "ap-southeast-3": {
+        "states": "states.ap-southeast-3.amazonaws.com",
+      },
+      "ap-southeast-4": {
+        "states": "states.ap-southeast-4.amazonaws.com",
+      },
+      "ca-central-1": {
+        "states": "states.ca-central-1.amazonaws.com",
+      },
+      "cn-north-1": {
+        "states": "states.cn-north-1.amazonaws.com",
+      },
+      "cn-northwest-1": {
+        "states": "states.cn-northwest-1.amazonaws.com",
+      },
+      "eu-central-1": {
+        "states": "states.eu-central-1.amazonaws.com",
+      },
+      "eu-central-2": {
+        "states": "states.eu-central-2.amazonaws.com",
+      },
+      "eu-north-1": {
+        "states": "states.eu-north-1.amazonaws.com",
+      },
+      "eu-south-1": {
+        "states": "states.eu-south-1.amazonaws.com",
+      },
+      "eu-south-2": {
+        "states": "states.eu-south-2.amazonaws.com",
+      },
+      "eu-west-1": {
+        "states": "states.eu-west-1.amazonaws.com",
+      },
+      "eu-west-2": {
+        "states": "states.eu-west-2.amazonaws.com",
+      },
+      "eu-west-3": {
+        "states": "states.eu-west-3.amazonaws.com",
+      },
+      "il-central-1": {
+        "states": "states.il-central-1.amazonaws.com",
+      },
+      "me-central-1": {
+        "states": "states.me-central-1.amazonaws.com",
+      },
+      "me-south-1": {
+        "states": "states.me-south-1.amazonaws.com",
+      },
+      "sa-east-1": {
+        "states": "states.sa-east-1.amazonaws.com",
+      },
+      "us-east-1": {
+        "states": "states.us-east-1.amazonaws.com",
+      },
+      "us-east-2": {
+        "states": "states.us-east-2.amazonaws.com",
+      },
+      "us-gov-east-1": {
+        "states": "states.us-gov-east-1.amazonaws.com",
+      },
+      "us-gov-west-1": {
+        "states": "states.us-gov-west-1.amazonaws.com",
+      },
+      "us-iso-east-1": {
+        "states": "states.amazonaws.com",
+      },
+      "us-iso-west-1": {
+        "states": "states.amazonaws.com",
+      },
+      "us-isob-east-1": {
+        "states": "states.amazonaws.com",
+      },
+      "us-west-1": {
+        "states": "states.us-west-1.amazonaws.com",
+      },
+      "us-west-2": {
+        "states": "states.us-west-2.amazonaws.com",
+      },
+    },
+  },
+  "Outputs": {
+    "ExampleImageDeploymentWithTagCustomResourceReportEDA14BDB": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            {
+              "Fn::GetAtt": [
+                "ExampleImageDeploymentWithTagCustomResource171700117085811730331",
+                "Status",
+              ],
+            },
+            ", see the logs here: ",
+            {
+              "Fn::GetAtt": [
+                "ExampleImageDeploymentWithTagCustomResource171700117085811730331",
+                "LogsUrl",
+              ],
+            },
+          ],
+        ],
+      },
+    },
+  },
+  "Parameters": {
+    "BootstrapVersion": {
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
+      "Type": "AWS::SSM::Parameter::Value<String>",
+    },
+  },
+  "Resources": {
+    "ExampleImageDeploymentWithTagCRProviderframeworkisComplete1167504B": {
+      "DependsOn": [
+        "ExampleImageDeploymentWithTagCRProviderframeworkisCompleteServiceRoleDefaultPolicy4161A198",
+        "ExampleImageDeploymentWithTagCRProviderframeworkisCompleteServiceRole09EF9FD8",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "3542be390685e0c8353d92ccb5796d343cd93ca946b6b0de798004206a199adc.zip",
+        },
+        "Description": "AWS CDK resource provider framework - isComplete (MyTestStack/ExampleImageDeploymentWithTag/CRProvider)",
+        "Environment": {
+          "Variables": {
+            "USER_IS_COMPLETE_FUNCTION_ARN": {
+              "Fn::GetAtt": [
+                "ExampleImageDeploymentWithTagisCompleteHandlerD0FA0CE7",
+                "Arn",
+              ],
+            },
+            "USER_ON_EVENT_FUNCTION_ARN": {
+              "Fn::GetAtt": [
+                "ExampleImageDeploymentWithTagonEventHandlerA0CD6F77",
+                "Arn",
+              ],
+            },
+          },
+        },
+        "Handler": "framework.isComplete",
+        "Role": {
+          "Fn::GetAtt": [
+            "ExampleImageDeploymentWithTagCRProviderframeworkisCompleteServiceRole09EF9FD8",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs18.x",
+        "Timeout": 900,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "ExampleImageDeploymentWithTagCRProviderframeworkisCompleteServiceRole09EF9FD8": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ExampleImageDeploymentWithTagCRProviderframeworkisCompleteServiceRoleDefaultPolicy4161A198": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ExampleImageDeploymentWithTagonEventHandlerA0CD6F77",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ExampleImageDeploymentWithTagonEventHandlerA0CD6F77",
+                          "Arn",
+                        ],
+                      },
+                      ":*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ExampleImageDeploymentWithTagisCompleteHandlerD0FA0CE7",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ExampleImageDeploymentWithTagisCompleteHandlerD0FA0CE7",
+                          "Arn",
+                        ],
+                      },
+                      ":*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ExampleImageDeploymentWithTagCRProviderframeworkisCompleteServiceRoleDefaultPolicy4161A198",
+        "Roles": [
+          {
+            "Ref": "ExampleImageDeploymentWithTagCRProviderframeworkisCompleteServiceRole09EF9FD8",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "ExampleImageDeploymentWithTagCRProviderframeworkonEvent64642ED2": {
+      "DependsOn": [
+        "ExampleImageDeploymentWithTagCRProviderframeworkonEventServiceRoleDefaultPolicy994B9FAE",
+        "ExampleImageDeploymentWithTagCRProviderframeworkonEventServiceRole62129629",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "3542be390685e0c8353d92ccb5796d343cd93ca946b6b0de798004206a199adc.zip",
+        },
+        "Description": "AWS CDK resource provider framework - onEvent (MyTestStack/ExampleImageDeploymentWithTag/CRProvider)",
+        "Environment": {
+          "Variables": {
+            "USER_IS_COMPLETE_FUNCTION_ARN": {
+              "Fn::GetAtt": [
+                "ExampleImageDeploymentWithTagisCompleteHandlerD0FA0CE7",
+                "Arn",
+              ],
+            },
+            "USER_ON_EVENT_FUNCTION_ARN": {
+              "Fn::GetAtt": [
+                "ExampleImageDeploymentWithTagonEventHandlerA0CD6F77",
+                "Arn",
+              ],
+            },
+            "WAITER_STATE_MACHINE_ARN": {
+              "Ref": "ExampleImageDeploymentWithTagCRProviderwaiterstatemachine4379B950",
+            },
+          },
+        },
+        "Handler": "framework.onEvent",
+        "Role": {
+          "Fn::GetAtt": [
+            "ExampleImageDeploymentWithTagCRProviderframeworkonEventServiceRole62129629",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs18.x",
+        "Timeout": 900,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "ExampleImageDeploymentWithTagCRProviderframeworkonEventServiceRole62129629": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ExampleImageDeploymentWithTagCRProviderframeworkonEventServiceRoleDefaultPolicy994B9FAE": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ExampleImageDeploymentWithTagonEventHandlerA0CD6F77",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ExampleImageDeploymentWithTagonEventHandlerA0CD6F77",
+                          "Arn",
+                        ],
+                      },
+                      ":*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ExampleImageDeploymentWithTagisCompleteHandlerD0FA0CE7",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ExampleImageDeploymentWithTagisCompleteHandlerD0FA0CE7",
+                          "Arn",
+                        ],
+                      },
+                      ":*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": "states:StartExecution",
+              "Effect": "Allow",
+              "Resource": {
+                "Ref": "ExampleImageDeploymentWithTagCRProviderwaiterstatemachine4379B950",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ExampleImageDeploymentWithTagCRProviderframeworkonEventServiceRoleDefaultPolicy994B9FAE",
+        "Roles": [
+          {
+            "Ref": "ExampleImageDeploymentWithTagCRProviderframeworkonEventServiceRole62129629",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "ExampleImageDeploymentWithTagCRProviderframeworkonTimeout225557DC": {
+      "DependsOn": [
+        "ExampleImageDeploymentWithTagCRProviderframeworkonTimeoutServiceRoleDefaultPolicy02A4F8AE",
+        "ExampleImageDeploymentWithTagCRProviderframeworkonTimeoutServiceRole9A224E6B",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "3542be390685e0c8353d92ccb5796d343cd93ca946b6b0de798004206a199adc.zip",
+        },
+        "Description": "AWS CDK resource provider framework - onTimeout (MyTestStack/ExampleImageDeploymentWithTag/CRProvider)",
+        "Environment": {
+          "Variables": {
+            "USER_IS_COMPLETE_FUNCTION_ARN": {
+              "Fn::GetAtt": [
+                "ExampleImageDeploymentWithTagisCompleteHandlerD0FA0CE7",
+                "Arn",
+              ],
+            },
+            "USER_ON_EVENT_FUNCTION_ARN": {
+              "Fn::GetAtt": [
+                "ExampleImageDeploymentWithTagonEventHandlerA0CD6F77",
+                "Arn",
+              ],
+            },
+          },
+        },
+        "Handler": "framework.onTimeout",
+        "Role": {
+          "Fn::GetAtt": [
+            "ExampleImageDeploymentWithTagCRProviderframeworkonTimeoutServiceRole9A224E6B",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs18.x",
+        "Timeout": 900,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "ExampleImageDeploymentWithTagCRProviderframeworkonTimeoutServiceRole9A224E6B": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ExampleImageDeploymentWithTagCRProviderframeworkonTimeoutServiceRoleDefaultPolicy02A4F8AE": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ExampleImageDeploymentWithTagonEventHandlerA0CD6F77",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ExampleImageDeploymentWithTagonEventHandlerA0CD6F77",
+                          "Arn",
+                        ],
+                      },
+                      ":*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ExampleImageDeploymentWithTagisCompleteHandlerD0FA0CE7",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ExampleImageDeploymentWithTagisCompleteHandlerD0FA0CE7",
+                          "Arn",
+                        ],
+                      },
+                      ":*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ExampleImageDeploymentWithTagCRProviderframeworkonTimeoutServiceRoleDefaultPolicy02A4F8AE",
+        "Roles": [
+          {
+            "Ref": "ExampleImageDeploymentWithTagCRProviderframeworkonTimeoutServiceRole9A224E6B",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "ExampleImageDeploymentWithTagCRProviderwaiterstatemachine4379B950": {
+      "DependsOn": [
+        "ExampleImageDeploymentWithTagCRProviderwaiterstatemachineRoleDefaultPolicyF795D586",
+        "ExampleImageDeploymentWithTagCRProviderwaiterstatemachineRoleC8C53A2A",
+      ],
+      "Properties": {
+        "DefinitionString": {
+          "Fn::Join": [
+            "",
+            [
+              "{"StartAt":"framework-isComplete-task","States":{"framework-isComplete-task":{"End":true,"Retry":[{"ErrorEquals":["States.ALL"],"IntervalSeconds":30,"MaxAttempts":60,"BackoffRate":1}],"Catch":[{"ErrorEquals":["States.ALL"],"Next":"framework-onTimeout-task"}],"Type":"Task","Resource":"",
+              {
+                "Fn::GetAtt": [
+                  "ExampleImageDeploymentWithTagCRProviderframeworkisComplete1167504B",
+                  "Arn",
+                ],
+              },
+              ""},"framework-onTimeout-task":{"End":true,"Type":"Task","Resource":"",
+              {
+                "Fn::GetAtt": [
+                  "ExampleImageDeploymentWithTagCRProviderframeworkonTimeout225557DC",
+                  "Arn",
+                ],
+              },
+              ""}}}",
+            ],
+          ],
+        },
+        "LoggingConfiguration": {
+          "Destinations": [
+            {
+              "CloudWatchLogsLogGroup": {
+                "LogGroupArn": {
+                  "Fn::GetAtt": [
+                    "ExampleImageDeploymentWithTagCRProviderwaiterstatemachineLogGroup173A24C7",
+                    "Arn",
+                  ],
+                },
+              },
+            },
+          ],
+          "IncludeExecutionData": false,
+          "Level": "ERROR",
+        },
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "ExampleImageDeploymentWithTagCRProviderwaiterstatemachineRoleC8C53A2A",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::StepFunctions::StateMachine",
+    },
+    "ExampleImageDeploymentWithTagCRProviderwaiterstatemachineLogGroup173A24C7": {
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Join": [
+            "",
+            [
+              "/aws/vendedlogs/states/waiter-state-machine-",
+              {
+                "Ref": "ExampleImageDeploymentWithTagCRProviderframeworkisComplete1167504B",
+              },
+              "-c89afcd766584719984e049ff0d77004ad93fe2b0e",
+            ],
+          ],
+        },
+        "RetentionInDays": 731,
+      },
+      "Type": "AWS::Logs::LogGroup",
+      "UpdateReplacePolicy": "Retain",
+    },
+    "ExampleImageDeploymentWithTagCRProviderwaiterstatemachineRoleC8C53A2A": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::FindInMap": [
+                    "ServiceprincipalMap",
+                    {
+                      "Ref": "AWS::Region",
+                    },
+                    "states",
+                  ],
+                },
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ExampleImageDeploymentWithTagCRProviderwaiterstatemachineRoleDefaultPolicyF795D586": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ExampleImageDeploymentWithTagCRProviderframeworkisComplete1167504B",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ExampleImageDeploymentWithTagCRProviderframeworkisComplete1167504B",
+                          "Arn",
+                        ],
+                      },
+                      ":*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ExampleImageDeploymentWithTagCRProviderframeworkonTimeout225557DC",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ExampleImageDeploymentWithTagCRProviderframeworkonTimeout225557DC",
+                          "Arn",
+                        ],
+                      },
+                      ":*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": [
+                "logs:CreateLogDelivery",
+                "logs:CreateLogStream",
+                "logs:GetLogDelivery",
+                "logs:UpdateLogDelivery",
+                "logs:DeleteLogDelivery",
+                "logs:ListLogDeliveries",
+                "logs:PutLogEvents",
+                "logs:PutResourcePolicy",
+                "logs:DescribeResourcePolicies",
+                "logs:DescribeLogGroups",
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ExampleImageDeploymentWithTagCRProviderwaiterstatemachineRoleDefaultPolicyF795D586",
+        "Roles": [
+          {
+            "Ref": "ExampleImageDeploymentWithTagCRProviderwaiterstatemachineRoleC8C53A2A",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "ExampleImageDeploymentWithTagCustomResource171700117085811730331": {
+      "DeletionPolicy": "Delete",
+      "DependsOn": [
+        "ExampleImageDeploymentWithTagisCompleteHandlerServiceRoleDefaultPolicyC3ED2AA7",
+        "ExampleImageDeploymentWithTagonEventHandlerServiceRoleDefaultPolicy1BC6A4E0",
+      ],
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "ExampleImageDeploymentWithTagCRProviderframeworkonEvent64642ED2",
+            "Arn",
+          ],
+        },
+        "projectName": {
+          "Ref": "ExampleImageDeploymentWithTagDockerImageDeployProject19448653",
+        },
+      },
+      "Type": "AWS::CloudFormation::CustomResource",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "ExampleImageDeploymentWithTagDockerImageDeployProject19448653": {
+      "Properties": {
+        "Artifacts": {
+          "Type": "NO_ARTIFACTS",
+        },
+        "Cache": {
+          "Type": "NO_CACHE",
+        },
+        "EncryptionKey": "alias/aws/s3",
+        "Environment": {
+          "ComputeType": "BUILD_GENERAL1_SMALL",
+          "Image": "aws/codebuild/standard:5.0",
+          "ImagePullCredentialsType": "CODEBUILD",
+          "PrivilegedMode": true,
+          "Type": "LINUX_CONTAINER",
+        },
+        "ServiceRole": {
+          "Fn::GetAtt": [
+            "ExampleImageDeploymentWithTagDockerImageDeployRole813E1020",
+            "Arn",
+          ],
+        },
+        "Source": {
+          "BuildSpec": {
+            "Fn::Join": [
+              "",
+              [
+                "{
+  "version": "0.2",
+  "phases": {
+    "build": {
+      "commands": [
+        "aws ecr get-login-password --region ",
+                {
+                  "Ref": "AWS::Region",
+                },
+                " | docker login --username AWS --password-stdin ",
+                {
+                  "Ref": "AWS::AccountId",
+                },
+                ".dkr.ecr.",
+                {
+                  "Ref": "AWS::Region",
+                },
+                ".amazonaws.com",
+        "docker pull ",
+                {
+                  "Fn::Sub": "\${AWS::AccountId}.dkr.ecr.\${AWS::Region}.\${AWS::URLSuffix}/cdk-hnb659fds-container-assets-\${AWS::AccountId}-\${AWS::Region}:1fafcc23128ab9b98a3e54da9a696c3a09cd5b415b4cf8c2a9db0b72976ea797",
+                },
+                "",
+        "docker tag ",
+                {
+                  "Fn::Sub": "\${AWS::AccountId}.dkr.ecr.\${AWS::Region}.\${AWS::URLSuffix}/cdk-hnb659fds-container-assets-\${AWS::AccountId}-\${AWS::Region}:1fafcc23128ab9b98a3e54da9a696c3a09cd5b415b4cf8c2a9db0b72976ea797",
+                },
+                " ",
+                {
+                  "Ref": "AWS::AccountId",
+                },
+                ".dkr.ecr.",
+                {
+                  "Ref": "AWS::Region",
+                },
+                ".",
+                {
+                  "Ref": "AWS::URLSuffix",
+                },
+                "/myrepository:myspecialtag",
+        "docker push ",
+                {
+                  "Ref": "AWS::AccountId",
+                },
+                ".dkr.ecr.",
+                {
+                  "Ref": "AWS::Region",
+                },
+                ".",
+                {
+                  "Ref": "AWS::URLSuffix",
+                },
+                "/myrepository:myspecialtag",
+        "docker logout"
+      ]
+    }
+  }
+}",
+              ],
+            ],
+          },
+          "Type": "NO_SOURCE",
+        },
+      },
+      "Type": "AWS::CodeBuild::Project",
+    },
+    "ExampleImageDeploymentWithTagDockerImageDeployRole813E1020": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "codebuild.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ExampleImageDeploymentWithTagDockerImageDeployRoleDefaultPolicyA91856EC": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage",
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition",
+                    },
+                    ":ecr:",
+                    {
+                      "Ref": "AWS::Region",
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId",
+                    },
+                    ":repository/",
+                    {
+                      "Fn::Sub": "cdk-hnb659fds-container-assets-\${AWS::AccountId}-\${AWS::Region}",
+                    },
+                  ],
+                ],
+              },
+            },
+            {
+              "Action": "ecr:GetAuthorizationToken",
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+            {
+              "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage",
+                "ecr:CompleteLayerUpload",
+                "ecr:UploadLayerPart",
+                "ecr:InitiateLayerUpload",
+                "ecr:PutImage",
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition",
+                    },
+                    ":ecr:",
+                    {
+                      "Ref": "AWS::Region",
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId",
+                    },
+                    ":repository/myrepository",
+                  ],
+                ],
+              },
+            },
+            {
+              "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition",
+                      },
+                      ":logs:",
+                      {
+                        "Ref": "AWS::Region",
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId",
+                      },
+                      ":log-group:/aws/codebuild/",
+                      {
+                        "Ref": "ExampleImageDeploymentWithTagDockerImageDeployProject19448653",
+                      },
+                    ],
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition",
+                      },
+                      ":logs:",
+                      {
+                        "Ref": "AWS::Region",
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId",
+                      },
+                      ":log-group:/aws/codebuild/",
+                      {
+                        "Ref": "ExampleImageDeploymentWithTagDockerImageDeployProject19448653",
+                      },
+                      ":*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": [
+                "codebuild:CreateReportGroup",
+                "codebuild:CreateReport",
+                "codebuild:UpdateReport",
+                "codebuild:BatchPutTestCases",
+                "codebuild:BatchPutCodeCoverages",
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition",
+                    },
+                    ":codebuild:",
+                    {
+                      "Ref": "AWS::Region",
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId",
+                    },
+                    ":report-group/",
+                    {
+                      "Ref": "ExampleImageDeploymentWithTagDockerImageDeployProject19448653",
+                    },
+                    "-*",
+                  ],
+                ],
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ExampleImageDeploymentWithTagDockerImageDeployRoleDefaultPolicyA91856EC",
+        "Roles": [
+          {
+            "Ref": "ExampleImageDeploymentWithTagDockerImageDeployRole813E1020",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "ExampleImageDeploymentWithTagisCompleteHandlerD0FA0CE7": {
+      "DependsOn": [
+        "ExampleImageDeploymentWithTagisCompleteHandlerServiceRoleDefaultPolicyC3ED2AA7",
+        "ExampleImageDeploymentWithTagisCompleteHandlerServiceRoleDC68DDA2",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "a85bb6311b2f25079910ac2e64ab20b22530d20d777ce623c4c7dbf7e8026c2a.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+          },
+        },
+        "Handler": "index.isCompleteHandler",
+        "Role": {
+          "Fn::GetAtt": [
+            "ExampleImageDeploymentWithTagisCompleteHandlerServiceRoleDC68DDA2",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs16.x",
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "ExampleImageDeploymentWithTagisCompleteHandlerServiceRoleDC68DDA2": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ExampleImageDeploymentWithTagisCompleteHandlerServiceRoleDefaultPolicyC3ED2AA7": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "codebuild:ListBuildsForProject",
+                "codebuild:BatchGetBuilds",
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "ExampleImageDeploymentWithTagDockerImageDeployProject19448653",
+                  "Arn",
+                ],
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ExampleImageDeploymentWithTagisCompleteHandlerServiceRoleDefaultPolicyC3ED2AA7",
+        "Roles": [
+          {
+            "Ref": "ExampleImageDeploymentWithTagisCompleteHandlerServiceRoleDC68DDA2",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "ExampleImageDeploymentWithTagonEventHandlerA0CD6F77": {
+      "DependsOn": [
+        "ExampleImageDeploymentWithTagonEventHandlerServiceRoleDefaultPolicy1BC6A4E0",
+        "ExampleImageDeploymentWithTagonEventHandlerServiceRole025D6E45",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "a85bb6311b2f25079910ac2e64ab20b22530d20d777ce623c4c7dbf7e8026c2a.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+          },
+        },
+        "Handler": "index.onEventhandler",
+        "Role": {
+          "Fn::GetAtt": [
+            "ExampleImageDeploymentWithTagonEventHandlerServiceRole025D6E45",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs16.x",
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "ExampleImageDeploymentWithTagonEventHandlerServiceRole025D6E45": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ExampleImageDeploymentWithTagonEventHandlerServiceRoleDefaultPolicy1BC6A4E0": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "codebuild:StartBuild",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "ExampleImageDeploymentWithTagDockerImageDeployProject19448653",
+                  "Arn",
+                ],
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ExampleImageDeploymentWithTagonEventHandlerServiceRoleDefaultPolicy1BC6A4E0",
+        "Roles": [
+          {
+            "Ref": "ExampleImageDeploymentWithTagonEventHandlerServiceRole025D6E45",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+  },
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                  ],
+                  {
+                    "Ref": "BootstrapVersion",
+                  },
+                ],
+              },
+            ],
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
+        },
+      ],
+    },
+  },
+}
+`;
